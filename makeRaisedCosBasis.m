@@ -91,8 +91,8 @@ if logScaling
     
     % Compute time grid points
     if isempty(timeRange)
-        minT = 0; % minimum time bin (where first basis starts)
-        maxT = invnl(logPeakRange(2)+2*dCtr)-logOffset; % maximum time bin (where last basis vector stops)
+        minT = 0; % minimum time bin (where first basis function starts)
+        maxT = invnl(logPeakRange(2)+2*dCtr)-logOffset; % maximum time bin (where last basis function stops)
     end
     tgrid = (minT:dt:maxT)'; % time grid
     nT = length(tgrid);   % number of time points in basis
