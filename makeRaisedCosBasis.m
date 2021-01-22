@@ -126,3 +126,9 @@ if initialOnesFlag == 1
     cosBasis(ii,1) = 1; % set first basis vector to constant before peak
 end
 
+% Check condition number
+cc = cond(cosBasis);  
+if cc > 1e12
+    warning(sprintf('Raised cosine basis is poorly conditioned (cond # = %.2f)',cc));
+end
+
